@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<openerp>
+  <data>
+
+    <!-- Brand: Form View -->
+    <record model="ir.ui.view" id="view_secondhandcars_brand_form">
+      <field name="name">secondhandcars.brand.form</field>
+      <field name="model">secondhandcars.brand</field>
+      <field name="arch" type="xml">
+	<form string="Brands of cars" version="7.0">
+	  <label for="name"/>
+	  <field name="name"/>
+    <label for="web_siteI"/>
+    <field name="web_siteI"/>
+	</form>
+      </field>
+    </record>
+
+    <!-- Model : Form View -->
+    <record model="ir.ui.view" id="view_secondhandcars_model_form">
+      <fied name= "name"> secondhandcars.model.form </fied>
+      <field name= "brand_id"> secondhandcars.model </field>
+
+
+
+    
+
+    <!-- Brand: Tree View -->
+    <record model="ir.ui.view" id="view_secondhandcars_brand_tree">
+      <field name="name">secondhandcars.brand.tree</field>
+      <field name="model">secondhandcars.brand</field>
+      <field name="field_parent"></field>
+      <field name="arch" type="xml">
+	<tree string="Brands of cars">
+	  <field name="name"/>
+	</tree>
+      </field>
+    </record>
+
+    <!-- Brand: Action -->
+    <record model="ir.actions.act_window" id="action_secondhandcars_brand">
+      <field name="name">Brands</field>
+      <field name="res_model">secondhandcars.brand</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="Second Hand Cars" id="base.menu_secondhandcars_root" sequence="120" groups="base.group_user"/>
+
+    <!-- Menu sections -->
+    <menuitem name="Configuration" id="menu_secondhandcars_configuration" parent="base.menu_secondhandcars_root" sequence="2"/>
+
+    <!-- Menu items -->
+    <menuitem name="Brands" id="menu_brand" parent="menu_secondhandcars_configuration" action="action_secondhandcars_brand" sequence="1"/>
+
+  </data>
+</openerp>

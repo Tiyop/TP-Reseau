@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="secondhandcars.brand" id="secondhandcars_brand_peugeot">
+            <field name="name">Peugeot</field>
+        </record>
+        <record model="secondhandcars.brand" id="secondhandcars_brand_renault">
+            <field name="name">Renault</field>
+        </record>
+        <record model="secondhandcars.brand" id="secondhandcars_brand_citroen">
+            <field name="name">Citroen</field>
+        </record>
+
+        <record id="base.user_demo" model="res.users">
+            <field name="groups_id" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+    </data>
+</openerp>
+
